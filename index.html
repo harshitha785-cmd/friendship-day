@@ -1,73 +1,362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Friendship Day Ishu ❤️</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body{
-font-family:Arial;
-background:#ffe6ef;
-text-align:center;
-padding:20px;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-h1{
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5,#fff5fa);
+overflow-x:hidden;
+min-height:100vh;
+}
+
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.heart{
+position:absolute;
+bottom:-40px;
+font-size:20px;
+animation:float 8s linear infinite;
+opacity:.7;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) scale(1);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-110vh) scale(1.5);
+opacity:0;
+}
+}
+
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+padding:20px;
+text-align:center;
+}
+
+.envelope{
+width:320px;
+height:220px;
+background:#fff;
+border-radius:12px;
+position:relative;
+cursor:pointer;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+transition:.4s;
+}
+
+.envelope:hover{
+transform:scale(1.03);
+}
+
+.flap{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:110px;
+background:#ff7aa2;
+clip-path:polygon(0 0,100% 0,50% 100%);
+border-radius:12px 12px 0 0;
+}
+
+.title{
+margin-top:120px;
+font-size:30px;
+font-family:'Dancing Script',cursive;
 color:#ff2e7a;
 }
-.card{
-background:white;
-padding:15px;
-margin:20px;
-border-radius:20px;
-box-shadow:0 0 10px #ccc;
-}
-img{
-width:90%;
-border-radius:15px;
-margin:10px;
-}
-p{
+
+.subtitle{
+margin-top:15px;
 font-size:18px;
-line-height:1.7;
+color:#666;
 }
+
+.openBtn{
+margin-top:35px;
+padding:14px 35px;
+border:none;
+background:#ff4f87;
+color:white;
+font-size:18px;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+}
+
+.openBtn:hover{
+background:#ff2169;
+}
+
+.letter{
+display:none;
+max-width:850px;
+margin:50px auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+line-height:2;
+font-size:18px;
+}
+
+h1{
+text-align:center;
+font-family:'Dancing Script',cursive;
+font-size:45px;
+color:#ff2e7a;
+margin-bottom:30px;
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>💖 Happy Friendship Day Ishu 💖</h1>
+<div class="hearts" id="hearts"></div>
 
-<div class="card">
-<h2>Dear Ishu 🌸</h2>
+<div class="container" id="home">
+
+<div class="envelope">
+
+<div class="flap"></div>
+
+<div class="title">
+💌 A Letter From Harshi
+</div>
+
+<div class="subtitle">
+Tap the button to open my heart ❤️
+</div>
+
+</div>
+
+<button class="openBtn" onclick="openLetter()">
+Open My Letter 💖
+</button>
+
+</div>
+
+<div class="letter" id="letter">
+
+<h1>Dear Ishu ❤️</h1>
+<p>
+I still remember the day we started talking like normal strangers,
+never knowing that one day you would become my whole comfort place.
+</p>
 
 <p>
-From strangers to becoming my safest person...
-Thank you for every smile,
-every selfie,
-every laugh,
-every silly fight,
-and every unforgettable memory.
+Today, you are not just my friend, you are my safe space,
+my peace, my happiness in human form.
+</p>
 
+<p>
+Whenever life feels heavy and my heart feels tired,
+you are the first person I think of.
+Not because you solve all my problems,
+but because you make them feel lighter just by being there.
+</p>
+
+<p>
+I don't have to hide my tears.
+I don't have to fake a smile.
+And that is the most beautiful feeling in this world.
+</p>
+
+<p>
+I don't want a thousand friends.
+I don't want a big circle.
+I just want one person who stays,
+and that person is you.
+</p>
+
+<p>
 No matter where life takes us,
-you'll always be my best friend.
-
-Happy Friendship Day ❤️
-
-Love,
-<b>Harshi</b>
+no matter how busy we become,
+promise me we will always find our way back
+to this pure, honest friendship.
 </p>
-
-</div>
-
-<div class="card">
-<h2>Our Memories 📸</h2>
 
 <p>
-(We'll add your photos in the next step.)
+Because having you in my life is one of the biggest blessings
+I will forever be thankful for.
 </p>
+
+<h2 style="text-align:center;color:#ff2e7a;margin-top:30px;">
+You are not just my best friend...<br>
+You are my forever person. ❤️
+</h2>
+
+<h3 style="text-align:center;margin-top:20px;">
+Happy Friendship Day, Ishu! 🌸
+</h3>
+
+<p style="text-align:right;margin-top:40px;font-size:22px;">
+With lots of love,<br>
+<b>Harshi 💖</b>
+</p>
+
+<div style="text-align:center;margin-top:40px;">
+<button class="openBtn" onclick="showMemories()">
+Continue to Our Memories 📸
+</button>
+</div>
 
 </div>
 
-<h2>❤️ Forever Harshi & Ishu ❤️</h2>
+<div class="letter" id="memories">
+
+<h1>📸 Our Beautiful Memories ❤️</h1>
+
+<p style="text-align:center;">
+Every photo and every video reminds me how lucky I am to have you in my life.
+</p>
+
+<div id="gallery">
+  <style>
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img,
+.gallery video{
+width:100%;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+transition:.4s;
+}
+
+.gallery img:hover,
+.gallery video:hover{
+transform:scale(1.05);
+}
+
+.end{
+text-align:center;
+padding:60px 20px;
+}
+
+.end h1{
+font-size:50px;
+color:#ff2e7a;
+font-family:'Dancing Script',cursive;
+}
+
+.end p{
+font-size:22px;
+margin-top:20px;
+line-height:1.8;
+}
+</style>
+
+<div class="gallery">
+
+<!-- Replace these with your own files -->
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</div>
+
+<div class="end">
+
+<h1>❤️ Happy Friendship Day Ishu ❤️</h1>
+
+<p>
+No matter where life takes us,<br>
+You'll always be my forever person.
+</p>
+
+<p>
+Thank you for every smile,<br>
+every memory,<br>
+every laugh,<br>
+and for always being there for me.
+</p>
+
+<h2 style="margin-top:30px;color:#ff2e7a;">
+With lots of love,<br>
+Harshi 💖
+</h2>
+
+</div>
+
+<script>
+
+function openLetter(){
+document.getElementById("home").style.display="none";
+document.getElementById("letter").style.display="block";
+window.scrollTo(0,0);
+}
+
+function showMemories(){
+document.getElementById("letter").style.display="none";
+document.getElementById("memories").style.display="block";
+window.scrollTo(0,0);
+}
+
+const hearts=document.getElementById("hearts");
+
+for(let i=0;i<35;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"%";
+
+h.style.animationDuration=(5+Math.random()*6)+"s";
+
+h.style.fontSize=(15+Math.random()*25)+"px";
+
+h.style.animationDelay=Math.random()*5+"s";
+
+hearts.appendChild(h);
+
+}
+
+</script>
 
 </body>
 </html>
